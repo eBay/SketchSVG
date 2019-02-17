@@ -24,3 +24,11 @@ From there, SketchSVG will convert your icons to SVGs as well as Base64s and out
 **SketchSVG will also generate a basic HTML page with a bare bones editor for you to test out your icons, change the colors, sizes, etc. Here is a screenshot of this:**
 
 ![alt text](https://media.giphy.com/media/1AeQc1qH6sfMlK9FOP/giphy.gif "Logo Title Text 1")
+
+## Demo
+
+We have included a couple of test files for single as well as multiple icons in a single sketch file. To try it out download our sample files in the `/sample` folder. 
+
+First install `sketchsvg` and grab our `.sketch` files from the repo. Then:
+
+`sketchsvg /path/to/multitest.sketch`
