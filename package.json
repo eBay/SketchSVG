@@ -2,14 +2,14 @@
   "name": "sketchsvg",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Patrick Canella (@pcanella)",
   "license": "ISC",
   "bin": {
-    "sketchsvg": "./index.js"
+    "sketchsvg": "./lib/index.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
