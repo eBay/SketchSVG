@@ -6,6 +6,10 @@
           opacity: 0;
       }
 
+      #svg_demo {
+          background: wheat;
+      }
+
       .svg_icn {
           margin-right: 20px;
       }
@@ -34,7 +38,7 @@
 
   
   <body>
-   <div id="svg_demo"><svg data-name="testsvg_0" class="svg_icn svg_icon_0" focusable="false" height="24" width="24"><use href="#testsvg_0"/></svg></div>
+   <div id="svg_demo"><svg data-name="testsvg_0" class="svg_icn svg_icon_0" focusable="false" height="24" width="24"><use href="#testsvg_0"/></svg><svg data-name="testsvg_1" class="svg_icn svg_icon_1" focusable="false" height="24" width="24"><use href="#testsvg_1"/></svg><svg data-name="testsvg_2" class="svg_icn svg_icon_2" focusable="false" height="24" width="24"><use href="#testsvg_2"/></svg><svg data-name="testsvg_3" class="svg_icn svg_icon_3" focusable="false" height="24" width="24"><use href="#testsvg_3"/></svg></div>
 
     <h2>Want to change the fill color and get the code(s)? Click on an SVG above!</h2>
 
@@ -56,11 +60,13 @@
             </code>
 
             <h4>Base64</h4>
-            <pre class="new_base64" contenteditable="true">            </pre>
+            <pre class="new_base64">            </pre>
         </div>
     </div>
 
-        <svg aria-hidden="true" hidden="" id="svg_area"><symbol viewbox="0 0 14 14" id="testsvg_0"><path d="M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14zM3.976 6.68a.553.553 0 0 0-.809 0 .621.621 0 0 0 0 .848l2.285 2.296a.553.553 0 0 0 .808 0l4.573-4.8a.621.621 0 0 0 0-.848.553.553 0 0 0-.809 0L5.856 8.55 3.976 6.68z" fill="#828282" fill-rule="evenodd"/></symbol></svg>
+        <svg aria-hidden="true" hidden="" id="svg_area"><symbol id="testsvg_0" viewbox="0 0 14 13"><path fill="#828282" fill-rule="evenodd" d="M10.878 7.317l-4.6 4.398a.771.771 0 0 0 0 1.1c.286.275.845.295 1.149 0C7.732 12.52 14 6.532 14 6.532S7.806.628 7.427.25c-.378-.38-.856-.281-1.15 0-.294.281-.372.729 0 1.1.372.37 4.6 4.397 4.6 4.397H.856c-.58 0-.855.393-.855.786s.273.785.855.785h10.023z"/></symbol><symbol id="testsvg_1" viewbox="0 0 15 14"><path fill="#FEFEFE" fill-rule="evenodd" d="M7.003 13.332a.987.987 0 0 1-.68-.257.92.92 0 0 1-.276-.664c0-.25.098-.481.277-.652a4355.7 4355.7 0 0 1 4.329-4.14H1.004C.314 7.619 0 7.135 0 6.685c0-.452.314-.937 1.004-.937h9.648a932.906 932.906 0 0 1-4.331-4.142.92.92 0 0 1-.295-.664.915.915 0 0 1 .298-.65c.334-.32.903-.454 1.358.002.374.374 6.51 6.223 6.571 6.282l.115.109-.115.108c-.062.06-6.271 5.99-6.573 6.28a.969.969 0 0 1-.677.259z"/></symbol><symbol id="testsvg_2" viewbox="0 0 14 13"><path fill="#231F20" fill-rule="evenodd" d="M3.122 5.712l4.601-4.398a.773.773 0 0 0 0-1.1c-.287-.275-.846-.295-1.15 0C6.268.509 0 6.497 0 6.497s6.195 5.903 6.573 6.282c.378.38.857.282 1.15 0 .295-.28.372-.728 0-1.099-.372-.37-4.6-4.397-4.6-4.397h10.023c.578 0 .854-.393.854-.786s-.273-.785-.854-.785H3.122z"/></symbol><symbol id="testsvg_3" viewbox="0 0 12 12"><path fill="#828282" fill-rule="evenodd" d="M3.297 1.924h7.69c.546-.001.962-.481.962-.961s-.448-.966-.961-.963C10.475.004 0 0 0 0s.017 10.34 0 10.989c-.015.647.47.961.963.961.49 0 .947-.325.961-.961.014-.635 0-7.692 0-7.692l8.377 8.379c.483.482 1.058.37 1.401.027.344-.343.458-.916-.027-1.401L3.297 1.924z"/></symbol></svg>
+
+        <div id="base64_area"><div id="testsvg_0_base64" class="hidden">url(&apos;data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNCAxMyI+PHBhdGggZD0iTTEwLjg3OCA3LjMxN2wtNC42IDQuMzk4YS43NzEuNzcxIDAgMCAwIDAgMS4xYy4yODYuMjc1Ljg0NS4yOTUgMS4xNDkgMEM3LjczMiAxMi41MiAxNCA2LjUzMiAxNCA2LjUzMlM3LjgwNi42MjggNy40MjcuMjVjLS4zNzgtLjM4LS44NTYtLjI4MS0xLjE1IDAtLjI5NC4yODEtLjM3Mi43MjkgMCAxLjEuMzcyLjM3IDQuNiA0LjM5NyA0LjYgNC4zOTdILjg1NmMtLjU4IDAtLjg1NS4zOTMtLjg1NS43ODZzLjI3My43ODUuODU1Ljc4NWgxMC4wMjN6Ii8+PC9zdmc+&apos;)</div><div id="testsvg_1_base64" class="hidden">url(&apos;data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNSAxNCI+PHBhdGggZD0iTTcuMDAzIDEzLjMzMmEuOTg3Ljk4NyAwIDAgMS0uNjgtLjI1Ny45Mi45MiAwIDAgMS0uMjc2LS42NjRjMC0uMjUuMDk4LS40ODEuMjc3LS42NTJhNDM1NS43IDQzNTUuNyAwIDAgMSA0LjMyOS00LjE0SDEuMDA0Qy4zMTQgNy42MTkgMCA3LjEzNSAwIDYuNjg1YzAtLjQ1Mi4zMTQtLjkzNyAxLjAwNC0uOTM3aDkuNjQ4YTkzMi45MDYgOTMyLjkwNiAwIDAgMS00LjMzMS00LjE0Mi45Mi45MiAwIDAgMS0uMjk1LS42NjQuOTE1LjkxNSAwIDAgMSAuMjk4LS42NWMuMzM0LS4zMi45MDMtLjQ1NCAxLjM1OC4wMDIuMzc0LjM3NCA2LjUxIDYuMjIzIDYuNTcxIDYuMjgybC4xMTUuMTA5LS4xMTUuMTA4Yy0uMDYyLjA2LTYuMjcxIDUuOTktNi41NzMgNi4yOGEuOTY5Ljk2OSAwIDAgMS0uNjc3LjI1OXoiLz48L3N2Zz4=&apos;)</div><div id="testsvg_2_base64" class="hidden">url(&apos;data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNCAxMyI+PHBhdGggZD0iTTMuMTIyIDUuNzEybDQuNjAxLTQuMzk4YS43NzMuNzczIDAgMCAwIDAtMS4xYy0uMjg3LS4yNzUtLjg0Ni0uMjk1LTEuMTUgMEM2LjI2OC41MDkgMCA2LjQ5NyAwIDYuNDk3czYuMTk1IDUuOTAzIDYuNTczIDYuMjgyYy4zNzguMzguODU3LjI4MiAxLjE1IDAgLjI5NS0uMjguMzcyLS43MjggMC0xLjA5OS0uMzcyLS4zNy00LjYtNC4zOTctNC42LTQuMzk3aDEwLjAyM2MuNTc4IDAgLjg1NC0uMzkzLjg1NC0uNzg2cy0uMjczLS43ODUtLjg1NC0uNzg1SDMuMTIyeiIvPjwvc3ZnPg==&apos;)</div><div id="testsvg_3_base64" class="hidden">url(&apos;data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxMiAxMiI+PHBhdGggZD0iTTMuMjk3IDEuOTI0aDcuNjljLjU0Ni0uMDAxLjk2Mi0uNDgxLjk2Mi0uOTYxcy0uNDQ4LS45NjYtLjk2MS0uOTYzQzEwLjQ3NS4wMDQgMCAwIDAgMHMuMDE3IDEwLjM0IDAgMTAuOTg5Yy0uMDE1LjY0Ny40Ny45NjEuOTYzLjk2MS40OSAwIC45NDctLjMyNS45NjEtLjk2MS4wMTQtLjYzNSAwLTcuNjkyIDAtNy42OTJsOC4zNzcgOC4zNzljLjQ4My40ODIgMS4wNTguMzcgMS40MDEuMDI3LjM0NC0uMzQzLjQ1OC0uOTE2LS4wMjctMS40MDFMMy4yOTcgMS45MjR6Ii8+PC9zdmc+&apos;)</div></div>
 
 
     <script type="text/javascript">
@@ -73,14 +79,22 @@
                 item.classList.remove('selected');
             });
             e.currentTarget.classList.add('selected');
+            const thisId = e.currentTarget.querySelector('use').href.baseVal;
+
+            const selectedEl = document.querySelector('#svg_area ' + thisId);
+
             document.querySelector('button').setAttribute('data-selector', e.currentTarget.getAttribute('data-name'));
             document.querySelector('.control_panel').classList.remove('hidden');
             document.querySelectorAll('input').forEach((thisInput) => {
                 thisInput.value = '';
             });
-            document.querySelectorAll('code, pre').forEach((thisEl) => {
-                thisEl.innerHTML = '';
-            })
+
+            document.querySelector('code').innerHTML = escapeHtml(selectedEl.outerHTML);
+            document.querySelector('pre').innerHTML = document.querySelector(thisId + '_base64').textContent;
+
+            // document.querySelectorAll('pre').forEach((thisEl) => {
+            //     thisEl.innerHTML = '';
+            // });
         };
         nodesArray.forEach((itm) => {
             itm.addEventListener('click', onClickHandler);
@@ -104,7 +118,7 @@
             
             // Start Base64
             const dVal = path.getAttribute('d');
-            document.querySelector('.new_base64').innerHTML = btoa(setSVGForBase64(inputV, dVal, inputW, inputH, inputColor));
+            document.querySelector('.new_base64').innerHTML = `url('data:image/svg+xml;base64,${btoa(setSVGForBase64(inputV, dVal, inputW, inputH, inputColor))}');`;
             document.querySelector(`svg[data-name="${dataAttr}"] use`).setAttribute('href', '#' + inputId);
 
         });
@@ -120,6 +134,11 @@
 
 
     </script>
+
+
+
+
+
 
 
 

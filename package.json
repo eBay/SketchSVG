@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "prestart": "rm -rf /lib/temp3.sketch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Patrick Canella (@pcanella)",
