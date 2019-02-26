@@ -8,3 +8,4 @@ lib/temp.sketch
 lib/tmpsvgs
 .nyc_*
 coverage
+lib/output.json

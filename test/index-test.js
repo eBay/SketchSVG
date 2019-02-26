@@ -11,6 +11,8 @@ const process = {
     argv: ['', '', './samples/multitest.sketch']
 };
 
+const mockItems = ['12345--Confirmation.svg', '12345--Mask.svg', '12345--Exclamation.svg'];
+const mockTempSVGPaths = './test/mock-data/tmpsvgs';
 const mockTempSketch = './test/mock-data/temp.sketch';
 
 describe('index.js -- Testing the overall index flow', () => {
@@ -45,6 +47,16 @@ describe('index.js -- Testing the overall index flow', () => {
         expect(result.layers.length).to.equal(3);
     });
 
+    it('should run getSVGs and resolve a promise and call generateHtmlPage', (done) => {
+        const generateHTMLSpy = sinon.spy(SVGSketch.prototype, 'generateHtmlPage');
+        const svgUtilSpy = sinon.spy(instance, 'svgUtil');
+        instance.getSVGs(mockTempSVGPaths, mockItems).then(() => {
+            expect(generateHTMLSpy.calledOnce).to.equal(true);
+            expect(svgUtilSpy.calledThrice).to.equal(true);
+            done();
+        });
+    });
+
     it('should run generateHtmlPage and make sure we read and write to the index.html page, then make sure the SVGs were injected properly', (done) => {
         const fsSpy = sinon.spy(fs, 'readFile');
         const fsWriteSpy = sinon.spy(fs, 'writeFile');
@@ -54,7 +66,7 @@ describe('index.js -- Testing the overall index flow', () => {
             resolve();
         }).then(() => {
             expect(fsSpy.calledOnce).to.equal(true);
-            expect(fsWriteSpy.calledOnce).to.equal(true);
+            expect(fsWriteSpy.calledTwice).to.equal(true);
             fs.readFile('./lib/index.html', (err, data) => {
                 const $ = cheerio.load(data.toString());
                 expect($('#svg_area symbol').length).to.equal(3);
@@ -71,7 +83,6 @@ describe('index.js -- Testing the overall index flow', () => {
                     const thisPath = $(el).text();
                     expect(thisPath).to.deep.equal(mockSVGArr[idx].base64);
                 });
-
                 done();
             });
         });

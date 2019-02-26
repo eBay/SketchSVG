@@ -32,3 +32,17 @@ We have included a couple of test files for single as well as multiple icons in 
 First install `sketchsvg` and grab our `.sketch` files from the repo. Then:
 
 `sketchsvg /path/to/multitest.sketch`
+
+## Questions/Comments
+
+Feel free to reach out to `patrickcanella AT gmail DOT com` for any questions or comments regarding this tool. Feel free to open an Issue or a Pull Request as you see fit. Thanks!
+
+
+## License Information
+
+Copyright 2019 eBay Inc. 
+Author/Developer: Patrick J Canella
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+https://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

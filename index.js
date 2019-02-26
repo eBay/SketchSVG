@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const SVGSketch = require('./lib/index');
 
 if (!process.argv[2]) {
