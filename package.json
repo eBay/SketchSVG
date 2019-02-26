@@ -9,12 +9,11 @@
     "lint": "./node_modules/.bin/eslint lib/",
     "coverage": "NODE_ENV=test DEPLOY_ENV=test nyc --reporter=html --reporter=text ./node_modules/.bin/mocha  --timeout 10000 --recursive ./test",
     "coverreport": "open ./coverage/index.html"
-    
   },
   "author": "Patrick Canella (@pcanella)",
   "license": "ISC",
   "bin": {
-    "sketchsvg": "./lib/index.js"
+    "sketchsvg": "./index.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
