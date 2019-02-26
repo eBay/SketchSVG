@@ -1,3 +1,4 @@
+const cheerio = require('cheerio');
 const sinon = require('sinon');
 const chai = require('chai');
 const expect = chai.expect;
@@ -23,12 +24,14 @@ describe('index.js -- Testing the overall index flow', () => {
 
     it('should create a new SVGSketch class instance and call init, with no artboard argv file', (done) => {
         const parseSpy = sinon.spy(ParseSketch.prototype, 'init');
+        const cleanupSpy = sinon.spy(SVGSketch.prototype, 'finalizeHtmlAndCleanup');
+
         new Promise(async(resolve, reject) => {
             await instance.init(process.argv[2]);
             resolve();
         }).then(() => {
             expect(parseSpy.calledOnce).to.equal(true);
-
+            expect(cleanupSpy.calledOnce).to.equal(true);
             // Check if temp files are gone
             expect(fs.existsSync('./lib/tmpsvgs')).to.equal(false);
             expect(fs.existsSync('./lib/temp.sketch')).to.equal(false);
@@ -42,10 +45,9 @@ describe('index.js -- Testing the overall index flow', () => {
         expect(result.layers.length).to.equal(3);
     });
 
-    it('should run generateHtmlPage and make sure we read and write to the index.html page', (done) => {
+    it('should run generateHtmlPage and make sure we read and write to the index.html page, then make sure the SVGs were injected properly', (done) => {
         const fsSpy = sinon.spy(fs, 'readFile');
         const fsWriteSpy = sinon.spy(fs, 'writeFile');
-        const cleanupSpy = sinon.spy(SVGSketch.prototype, 'finalizeHtmlAndCleanup');
 
         new Promise(async(resolve) => {
             await instance.generateHtmlPage(mockSVGArr);
@@ -53,8 +55,25 @@ describe('index.js -- Testing the overall index flow', () => {
         }).then(() => {
             expect(fsSpy.calledOnce).to.equal(true);
             expect(fsWriteSpy.calledOnce).to.equal(true);
-            expect(cleanupSpy.calledOnce).to.equal(true);
-            done();
+            fs.readFile('./lib/index.html', (err, data) => {
+                const $ = cheerio.load(data.toString());
+                expect($('#svg_area symbol').length).to.equal(3);
+                expect($('#base64_area div').length).to.equal(3);
+
+                $('#svg_area symbol').each((idx, el) => {
+                    const thisPath = $(el, 'path').html();
+                    let expectedPath = cheerio.load(mockSVGArr[idx].svg);
+                    expectedPath = $(expectedPath.html(), 'path').html();
+                    expect(thisPath).to.deep.equal(expectedPath);
+                });
+
+                $('#base64_area div').each((idx, el) => {
+                    const thisPath = $(el).text();
+                    expect(thisPath).to.deep.equal(mockSVGArr[idx].base64);
+                });
+
+                done();
+            });
         });
     });
 });

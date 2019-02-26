@@ -1,16 +1,16 @@
 [
     {
-        "svg": "<symbol id=Confirmation_0.7690344901374977 viewBox=\"0 0 14 14\"><path fill=\"#828282\" fill-rule=\"evenodd\" d=\"M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14zM3.976 6.68a.553.553 0 0 0-.809 0 .621.621 0 0 0 0 .848l2.285 2.296a.553.553 0 0 0 .808 0l4.573-4.8a.621.621 0 0 0 0-.848.553.553 0 0 0-.809 0L5.856 8.55 3.976 6.68z\"></path></symbol>",
+        "svg": "<symbol id=\"Confirmation_0.7690344901374977\" viewBox=\"0 0 14 14\"><path fill=\"#828282\" fill-rule=\"evenodd\" d=\"M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14zM3.976 6.68a.553.553 0 0 0-.809 0 .621.621 0 0 0 0 .848l2.285 2.296a.553.553 0 0 0 .808 0l4.573-4.8a.621.621 0 0 0 0-.848.553.553 0 0 0-.809 0L5.856 8.55 3.976 6.68z\"></path></symbol>",
         "base64": "url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNCAxNCI+PHBhdGggZD0iTTcgMTRBNyA3IDAgMSAwIDcgMGE3IDcgMCAwIDAgMCAxNHpNMy45NzYgNi42OGEuNTUzLjU1MyAwIDAgMC0uODA5IDAgLjYyMS42MjEgMCAwIDAgMCAuODQ4bDIuMjg1IDIuMjk2YS41NTMuNTUzIDAgMCAwIC44MDggMGw0LjU3My00LjhhLjYyMS42MjEgMCAwIDAgMC0uODQ4LjU1My41NTMgMCAwIDAtLjgwOSAwTDUuODU2IDguNTUgMy45NzYgNi42OHoiLz48L3N2Zz4=')",
         "name": "Confirmation_0.7690344901374977"
     },
     {
-        "svg": "<symbol id=Mask_0.3882814125384366 viewBox=\"0 0 14 14\"><path fill=\"#828282\" fill-rule=\"evenodd\" d=\"M7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm0 11.94c.7.017.7-.781.7-.781V5.734S7.7 4.989 7 5c-.7.011-.7.734-.7.734v5.425s0 .763.7.78zM7 3.8a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4z\"></path></symbol>",
+        "svg": "<symbol id=\"Mask_0.3882814125384366\" viewBox=\"0 0 14 14\"><path fill=\"#828282\" fill-rule=\"evenodd\" d=\"M7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm0 11.94c.7.017.7-.781.7-.781V5.734S7.7 4.989 7 5c-.7.011-.7.734-.7.734v5.425s0 .763.7.78zM7 3.8a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4z\"></path></symbol>",
         "base64": "url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNCAxNCI+PHBhdGggZD0iTTcgMEMzLjEzNiAwIDAgMy4xMzYgMCA3czMuMTM2IDcgNyA3IDctMy4xMzYgNy03LTMuMTM2LTctNy03em0wIDExLjk0Yy43LjAxNy43LS43ODEuNy0uNzgxVjUuNzM0UzcuNyA0Ljk4OSA3IDVjLS43LjAxMS0uNy43MzQtLjcuNzM0djUuNDI1czAgLjc2My43Ljc4ek03IDMuOGEuNy43IDAgMSAwIDAtMS40LjcuNyAwIDAgMCAwIDEuNHoiLz48L3N2Zz4=')",
         "name": "Mask_0.3882814125384366"
     },
     {
-        "svg": "<symbol id=Exclamation_0.18129079924424518 viewBox=\"0 0 14 14\"><path fill=\"#828282\" fill-rule=\"evenodd\" d=\"M7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm0 9.34c.7.017.7-.781.7-.781V3.134s0-.745-.7-.734c-.7.011-.7.734-.7.734v5.425s0 .763.7.78zm0 2.46a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4z\"></path></symbol>",
+        "svg": "<symbol id=\"Exclamation_0.18129079924424518\" viewBox=\"0 0 14 14\"><path fill=\"#828282\" fill-rule=\"evenodd\" d=\"M7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm0 9.34c.7.017.7-.781.7-.781V3.134s0-.745-.7-.734c-.7.011-.7.734-.7.734v5.425s0 .763.7.78zm0 2.46a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4z\"></path></symbol>",
         "base64": "url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNCAxNCI+PHBhdGggZD0iTTcgMEMzLjEzNiAwIDAgMy4xMzYgMCA3czMuMTM2IDcgNyA3IDctMy4xMzYgNy03LTMuMTM2LTctNy03em0wIDkuMzRjLjcuMDE3LjctLjc4MS43LS43ODFWMy4xMzRzMC0uNzQ1LS43LS43MzRjLS43LjAxMS0uNy43MzQtLjcuNzM0djUuNDI1czAgLjc2My43Ljc4em0wIDIuNDZhLjcuNyAwIDEgMCAwLTEuNC43LjcgMCAwIDAgMCAxLjR6Ii8+PC9zdmc+')",
         "name": "Exclamation_0.18129079924424518"
     }
