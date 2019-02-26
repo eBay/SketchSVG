@@ -1,12 +1,15 @@
 {
   "name": "sketchsvg",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "prestart": "rm -rf /lib/temp.sketch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint lib/"
+    "test": "./node_modules/.bin/mocha --ui bdd --reporter spec  ./test --recursive --ignore-leaks --timeout 10000",
+    "lint": "./node_modules/.bin/eslint lib/",
+    "coverage": "NODE_ENV=test DEPLOY_ENV=test nyc --reporter=html --reporter=text ./node_modules/.bin/mocha  --timeout 10000 --recursive ./test",
+    "coverreport": "open ./coverage/index.html"
+    
   },
   "author": "Patrick Canella (@pcanella)",
   "license": "ISC",
@@ -20,13 +23,20 @@
     "fs-extra": "^7.0.1",
     "node-emoji": "^1.10.0",
     "node-sketch": "^0.12.2",
-    "path": "^0.12.7",
     "shelljs": "^0.8.3",
     "svgo": "^1.1.1",
     "terminal-link": "^1.2.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^5",
-    "eslint-config-ebay": "^1.0.0"
+    "eslint-config-ebay": "^1.0.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "sinon": "^7.2.4",
+    "path": "^0.12.7"
+  },
+  "publishConfig": {
+    "registry": "https://npm.corp.ebay.com"
   }
 }

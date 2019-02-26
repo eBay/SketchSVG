@@ -4,3 +4,7 @@ npm-debug.log*
 yarn-error.log*
 .DS_Store
 .eslint-checkstyle.xml
+lib/temp.sketch
+lib/tmpsvgs
+.nyc_*
+coverage
