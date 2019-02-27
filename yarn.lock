@@ -90,6 +90,13 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@ebay/retriever@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.npm.es.ebay.com/@/@ebay/retriever/_attachments/retriever-1.1.0.tgz#d7ce79c33c8f738d1564f229e913b37c06185333"
+  integrity sha512-jQc94a10WYTpsvZ5C8vDk4Lemd5qcoeEHE6SLfhiHKZNJsbbq3lDERkws7IaJclrsmvaDhG5zCicIoYCdvze6w==
+  dependencies:
+    lodash.get "^4.4.2"
+
 "@sinonjs/commons@^1.0.2", "@sinonjs/commons@^1.3.0":
   version "1.3.0"
   resolved "https://registry.npm.es.ebay.com/@/@sinonjs/commons/_attachments/commons-1.3.0.tgz#50a2754016b6f30a994ceda6d9a0a8c36adda849"
@@ -1700,6 +1707,11 @@ lodash.flattendeep@^4.4.0:
   version "4.4.0"
   resolved "https://registry.npm.es.ebay.com/l/lodash.flattendeep/_attachments/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
   integrity sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.npm.es.ebay.com/l/lodash.get/_attachments/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 lodash.toarray@^4.4.0:
   version "4.4.0"
