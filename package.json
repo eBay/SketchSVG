@@ -1,7 +1,7 @@
 {
   "name": "sketchsvg",
   "version": "0.0.1",
-  "description": "",
+  "description": "Command line tool used to convert and compress Sketch Icons/images to SVG and base64 formats.",
   "main": "index.js",
   "scripts": {
     "prestart": "rm -rf /lib/temp.sketch",

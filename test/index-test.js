@@ -2,7 +2,7 @@ const cheerio = require('cheerio');
 const sinon = require('sinon');
 const chai = require('chai');
 const expect = chai.expect;
-const SVGSketch = require('../lib/index');
+const SketchSVG = require('../lib/index');
 const ParseSketch = require('../lib/parse-sketch');
 const fs = require('fs-extra');
 const mockSVGArr = require('./mock-data/svgArr');
@@ -18,15 +18,15 @@ const mockTempSketch = './test/mock-data/temp.sketch';
 describe('index.js -- Testing the overall index flow', () => {
     let instance;
     beforeEach(() => {
-        instance = new SVGSketch();
+        instance = new SketchSVG();
     });
     afterEach(() => {
         instance = null;
     });
 
-    it('should create a new SVGSketch class instance and call init, with no artboard argv file', (done) => {
+    it('should create a new SketchSVG class instance and call init, with no artboard argv file', (done) => {
         const parseSpy = sinon.spy(ParseSketch.prototype, 'init');
-        const cleanupSpy = sinon.spy(SVGSketch.prototype, 'finalizeHtmlAndCleanup');
+        const cleanupSpy = sinon.spy(SketchSVG.prototype, 'finalizeHtmlAndCleanup');
 
         new Promise(async(resolve, reject) => {
             await instance.init(process.argv[2]);
@@ -48,7 +48,7 @@ describe('index.js -- Testing the overall index flow', () => {
     });
 
     it('should run getSVGs and resolve a promise and call generateHtmlPage', (done) => {
-        const generateHTMLSpy = sinon.spy(SVGSketch.prototype, 'generateHtmlPage');
+        const generateHTMLSpy = sinon.spy(SketchSVG.prototype, 'generateHtmlPage');
         const svgUtilSpy = sinon.spy(instance, 'svgUtil');
         instance.getSVGs(mockTempSVGPaths, mockItems).then(() => {
             expect(generateHTMLSpy.calledOnce).to.equal(true);
