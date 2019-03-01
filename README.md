@@ -4,6 +4,8 @@
 
 SketchSVG is a CLI that is intended to convert icons made in Sketch to compressed, easy to use SVGs for use on the web. SketchSVG also will convert these to a Base64 encoded value so they can be used in conjunction with the CSS `url` property.
 
+Originally, we at eBay used a [manual process](https://github.com/eBay/skin/blob/master/ICON-CREATION.md), but this tool was created to alleviate that almost entirely in favor of this automation tool.
+
 ### Installation
 
 **Important: It should be noted that this is for Mac only, since Sketch is only on Mac OS**
