@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
+<!DOCTYPE html><html><head>
     <meta charset="UTF-8">
     <title>Sketch -&gt; SVG Edit Panel</title>
     <style>
@@ -63,6 +60,10 @@
             <pre class="new_base64"></pre>
         </div>
     </div>
+
+    <svg aria-hidden="true" hidden="" id="svg_area"></svg>
+
+    <div id="base64_area"></div>
     <script type="text/javascript">
         const setSVGForBase64 = (viewbox, dAttr, width, height, color) => `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="${viewbox}"><path fill="${color}" fill-rule="evenodd" d="${dAttr}"/></svg>`;
 
@@ -142,6 +143,11 @@
 
 
 
-</body>
 
-</html>
+
+
+
+
+
+
+</body></html>
