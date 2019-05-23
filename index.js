@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*************************************************************
 Copyright 2019 eBay Inc.
 Author/Developer: Patrick Canella
@@ -7,7 +9,6 @@ license that can be found in the LICENSE file or at
 https://opensource.org/licenses/MIT.
 ************************************************************/
 
-#!/usr/bin/env node
 const SketchSVG = require('./lib/index');
 const fs = require('fs');
 const colors = require('colors');
