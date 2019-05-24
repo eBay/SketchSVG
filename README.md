@@ -33,6 +33,10 @@ First install `sketchsvg` and grab our `.sketch` files from the repo. Then:
 
 `sketchsvg /path/to/multitest.sketch`
 
+## Contributing
+
+Interested in contributing? That's awesome! Please check out our [Contributing Guidelines](). 
+
 ## Questions/Comments
 
 Feel free to reach out to `patrickcanella AT gmail DOT com` for any questions or comments regarding this tool. Feel free to open an Issue or a Pull Request as you see fit. Thanks!
