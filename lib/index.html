@@ -1,0 +1,153 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <title>Sketch -&gt; SVG Edit Panel</title>
+    <style>
+        .hidden {
+            opacity: 0;
+        }
+
+        #svg_demo {
+            background: wheat;
+        }
+
+        .svg_icn {
+            margin-right: 20px;
+        }
+
+        .selected {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .control_panel_code {
+            width: 500px;
+        }
+
+        input {
+            display: block;
+        }
+
+        .new_base64 {
+            width: 300px;
+            overflow: visible;
+            height: 200px;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h2>Want to change the fill color and get the code(s)? Click on an SVG below!</h2>
+    <div id="svg_demo"></div>
+
+    <div class="control_panel hidden">
+        <h3>Add your color here</h3>
+        SVG ID: (SVG only) <input class="inputId" type="text">
+        Color: <input class="inputTxt" type="text">
+        ViewBox Value: (Defaults to original viewBox as seen above)<input class="inputViewbox" type="text">
+        Width: (Defaults to 24, only adds to base64) <input class="inputWidth" type="text">
+        Height: (Defaults to 24, only adds to base64) <input class="inputHeight" type="text">
+        <button class="changeBtn">Change it!</button>
+
+        <div class="control_panel_code">
+            <h3>Here&apos;s the the updated SVG and it&apos;s associated Base64 encode! Enjoy!</h3>
+            <h4>SVG</h4>
+            <code class="new_svg"></code>
+
+            <h4>Base64</h4>
+            <pre class="new_base64"></pre>
+        </div>
+    </div>
+
+    <svg aria-hidden="true" hidden="" id="svg_area"></svg>
+
+    <div id="base64_area"></div>
+    <script type="text/javascript">
+        const setSVGForBase64 = (viewbox, dAttr, width, height, color) => `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="${viewbox}"><path fill="${color}" fill-rule="evenodd" d="${dAttr}"/></svg>`;
+
+        const nodesArray = [].slice.call(document.querySelectorAll('.svg_icn'));
+        const onClickHandler = (e) => {
+            nodesArray.forEach((item) => {
+                item.classList.remove('selected');
+            });
+            e.currentTarget.classList.add('selected');
+            const thisId = e.currentTarget.querySelector('use').href.baseVal;
+
+            const selectedEl = document.querySelector('#svg_area ' + thisId);
+
+            document.querySelector('button').setAttribute('data-selector', e.currentTarget.getAttribute('data-name'));
+            document.querySelector('.control_panel').classList.remove('hidden');
+            document.querySelectorAll('input').forEach((thisInput) => {
+                thisInput.value = '';
+            });
+
+            document.querySelector('code').innerHTML = escapeHtml(selectedEl.outerHTML);
+            document.querySelector('pre').innerHTML = document.querySelector(thisId + '_base64').textContent;
+        };
+        nodesArray.forEach((itm) => {
+            itm.addEventListener('click', onClickHandler);
+        });
+        document.querySelector('.changeBtn').addEventListener('click', (e) => {
+            const dataAttr = e.target.getAttribute('data-selector');
+            const selectedSymbol = document.querySelector('#svg_area symbol#' + dataAttr);
+            let inputColor = document.querySelector('.inputTxt').value;
+            const inputId = document.querySelector('.inputId').value || selectedSymbol.id;
+            const inputV = document.querySelector('.inputViewbox').value || selectedSymbol.getAttribute('viewBox');
+            const inputW = document.querySelector('.inputWidth').value || '24';
+            const inputH = document.querySelector('.inputHeight').value || '24';
+            const path = selectedSymbol.querySelector('path');
+
+            inputColor = (inputColor.charAt('0') !== '#') ? '#' + inputColor : inputColor;
+
+            selectedSymbol.setAttribute('viewBox', inputV);
+            selectedSymbol.setAttribute('id', inputId || selectedSymbol.id);
+            path.setAttribute('fill', inputColor);
+            document.querySelector('.new_svg').innerHTML = escapeHtml(selectedSymbol.outerHTML);
+
+            // Start Base64
+            const dVal = path.getAttribute('d');
+            document.querySelector('.new_base64').innerHTML = `url('data:image/svg+xml;base64,${btoa(setSVGForBase64(inputV, dVal, inputW, inputH, inputColor))}');`;
+            document.querySelector(`svg[data-name="${dataAttr}"] use`).setAttribute('href', '#' + inputId);
+
+        });
+
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
