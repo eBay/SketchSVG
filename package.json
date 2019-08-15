@@ -22,7 +22,7 @@
     "eslint-plugin-chai-friendly": "^0.4.1",
     "fs-extra": "^7.0.1",
     "node-emoji": "^1.10.0",
-    "node-sketch": "^0.12.2",
+    "node-sketch": "^0.14.1",
     "shelljs": "^0.8.3",
     "svgo": "^1.1.1",
     "terminal-link": "^1.2.0"
