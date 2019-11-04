@@ -251,13 +251,6 @@ astral-regex@^1.0.0:
   resolved "https://registry.npm.es.ebay.com/a/astral-regex/_attachments/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
   integrity sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==
 
-async@^2.5.0:
-  version "2.6.2"
-  resolved "https://registry.npm.es.ebay.com/a/async/_attachments/async-2.6.2.tgz#18330ea7e6e313887f5d2f2a904bac6fe4dd5381"
-  integrity sha512-H1qVYh1MYhEEFLsP97cVKqCGo7KfCyTt6uEWqsTBr9SO84oK9Uwbyd/yCW+6rKJLHksBNUVWZDAjfS+Ccx0Bbg==
-  dependencies:
-    lodash "^4.17.11"
-
 atob@^2.1.1:
   version "2.1.2"
   resolved "https://registry.npm.es.ebay.com/a/atob/_attachments/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
@@ -480,10 +473,10 @@ colors@~1.1.2:
   resolved "https://registry.npm.es.ebay.com/c/colors/_attachments/colors-1.1.2.tgz#168a4701756b6a7f51a12ce0c97bfa28c084ed63"
   integrity sha1-FopHAXVran9RoSzgyXv6KMCE7WM=
 
-commander@~2.17.1:
-  version "2.17.1"
-  resolved "https://registry.npm.es.ebay.com/c/commander/_attachments/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
-  integrity sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==
+commander@~2.20.3:
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+  integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -1170,11 +1163,11 @@ growl@1.10.5:
   integrity sha512-qBr4OuELkhPenW6goKVXiv47US3clb3/IbuWF9KNKEijAy9oeHxU9IgzjvJhHkUzhaj7rOUD7+YGWqUjLp5oSA==
 
 handlebars@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.npm.es.ebay.com/h/handlebars/_attachments/handlebars-4.1.0.tgz#0d6a6f34ff1f63cecec8423aa4169827bf787c3a"
-  integrity sha512-l2jRuU1NAWK6AW5qqcTATWQJvNPEwkM7NEKSiv/gqOsoSQbVoWyqVEY5GS+XPQ88zLNmqASRpzfdm8d79hJS+w==
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.1.tgz#8a01c382c180272260d07f2d1aa3ae745715c7ba"
+  integrity sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==
   dependencies:
-    async "^2.5.0"
+    neo-async "^2.6.0"
     optimist "^0.6.1"
     source-map "^0.6.1"
   optionalDependencies:
@@ -1841,7 +1834,7 @@ minimist@0.0.8:
 
 minimist@~0.0.1:
   version "0.0.10"
-  resolved "https://registry.npm.es.ebay.com/m/minimist/_attachments/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
   integrity sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8=
 
 mixin-deep@^1.2.0:
@@ -1924,6 +1917,11 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npm.es.ebay.com/n/natural-compare/_attachments/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
+
+neo-async@^2.6.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
+  integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -2094,7 +2092,7 @@ onetime@^2.0.0:
 
 optimist@^0.6.1:
   version "0.6.1"
-  resolved "https://registry.npm.es.ebay.com/o/optimist/_attachments/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
+  resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
   integrity sha1-2j6nRob6IaGaERwybpDrFaAZZoY=
   dependencies:
     minimist "~0.0.1"
@@ -2626,7 +2624,7 @@ source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6:
 
 source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
-  resolved "https://registry.npm.es.ebay.com/s/source-map/_attachments/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
 spawn-wrap@^1.4.2:
@@ -2913,11 +2911,11 @@ type-detect@4.0.8, type-detect@^4.0.0, type-detect@^4.0.5:
   integrity sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
 
 uglify-js@^3.1.4:
-  version "3.4.9"
-  resolved "https://registry.npm.es.ebay.com/u/uglify-js/_attachments/uglify-js-3.4.9.tgz#af02f180c1207d76432e473ed24a28f4a782bae3"
-  integrity sha512-8CJsbKOtEbnJsTyv6LE6m6ZKniqMiFWmm9sRbopbkGs3gMPPfd3Fh8iIA4Ykv5MgaTbqHr4BaoGLJLZNhsrW1Q==
+  version "3.6.7"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.6.7.tgz#15f49211df6b8a01ee91322bbe46fa33223175dc"
+  integrity sha512-4sXQDzmdnoXiO+xvmTzQsfIiwrjUCSA95rSP4SEd8tDb51W2TiDOlL76Hl+Kw0Ie42PSItCW8/t6pBNCF2R48A==
   dependencies:
-    commander "~2.17.1"
+    commander "~2.20.3"
     source-map "~0.6.1"
 
 union-value@^1.0.0:
@@ -3019,7 +3017,7 @@ wide-align@1.1.3:
 
 wordwrap@~0.0.2:
   version "0.0.3"
-  resolved "https://registry.npm.es.ebay.com/w/wordwrap/_attachments/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
+  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
   integrity sha1-o9XabNXAvAAI03I0u68b7WMFkQc=
 
 wordwrap@~1.0.0:
