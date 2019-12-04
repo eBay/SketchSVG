@@ -9,3 +9,5 @@ lib/tmpsvgs
 .nyc_*
 coverage
 lib/output.json
+lib/svg.html
+lib/variables.less
