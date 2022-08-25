@@ -23,7 +23,8 @@ From there, SketchSVG will convert your icons to SVGs as well as Base64s and out
 
 **SketchSVG will also generate a basic HTML page with a bare bones editor for you to test out your icons, change the colors, sizes, etc. Here is a screenshot of this:**
 
-![alt text](https://media.giphy.com/media/1AeQc1qH6sfMlK9FOP/giphy.gif "Logo Title Text 1")
+![Screen Shot 2022-08-25 at 2 33 28 PM](https://user-images.githubusercontent.com/4923719/186773008-041b3734-d3bf-43f8-af73-4535c7f3a243.png)
+
 
 ## Demo
 
